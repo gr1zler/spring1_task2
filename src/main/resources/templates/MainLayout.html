@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <title>ApplicationRequest</title>
+    <link rel="stylesheet" th:href="@{'/css/bootstrap.css'}">
+    <link rel="stylesheet" th:href="@{'/request_type.css'}">
+    <script type="text/javascript" th:src="@{'/js/bootstrap.bundle.js'}"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <head th:insert="Head_navbar.html"></head>
+            <div class="card card-white mb-5" style="margin-top: 20px">
+                <div class="card-heading clearfix border-bottom mb-4"
+                     layout:fragment="Nametype">
+                </div>
+                <div class="card-body"  >
+                    <div style="margin: auto auto ;width: 40%" layout:fragment="add_application">
+                    </div>
+                    <ul class="list-unstyled" layout:fragment="MainInformation">
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>
